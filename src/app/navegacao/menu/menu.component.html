@@ -1,0 +1,32 @@
+<div class="sidebar-container">
+    <ul class="sidebar-navigation">
+        <li>
+            <a [routerLink]="['/home']">
+                <i class="fa fa-home" aria-hidden="true"></i> Home
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/aluna/listar']">
+                <i class="fas fa-handshake" aria-hidden="true"></i> Alunas
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/chamada/listar']">
+                <i class="fas fa-ticket-alt" aria-hidden="true"></i> Chamada
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/config/listar']">
+                <i class="fas fa-address-card" aria-hidden="true"></i> Configurações
+            </a>
+        </li>      
+    </ul>
+</div>
+
+<div class="content-container">
+    <div class="container-fluid">
+
+        <router-outlet></router-outlet>
+
+    </div>
+</div>
