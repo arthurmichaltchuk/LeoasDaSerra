@@ -18,13 +18,10 @@ import { HttpAlunaService } from './features/aluna/services/http-aluna.service';
 import { ChamadaCriarComponent } from './features/chamada/criar/chamada-criar.component';
 import { ChamadaEditarComponent } from './features/chamada/editar/chamada-editar.component';
 import { ChamadaListarComponent } from './features/chamada/listar/chamada-listar.component';
-import { ChamadaServicesComponent } from './features/chamada/services/chamada-services.component';
-import { ChamadaViewModelsComponent } from './features/chamada/viewModels/chamada-view-models.component';
 import { ConfigCriarComponent } from './features/config/criar/config-criar.component';
 import { ConfigEditarComponent } from './features/config/editar/config-editar.component';
 import { ConfigListarComponent } from './features/config/listar/config-listar.component';
-import { ConfigServicesComponent } from './features/config/services/config-services.component';
-import { ConfigViewModelsComponent } from './features/config/viewModels/config-view-models.component';
+import { HttpChamadaService } from './features/chamada/services/http-chamada.service';
 
 @NgModule({
   declarations: [
@@ -39,13 +36,9 @@ import { ConfigViewModelsComponent } from './features/config/viewModels/config-v
     ChamadaCriarComponent,
     ChamadaEditarComponent,
     ChamadaListarComponent,
-    ChamadaServicesComponent,
-    ChamadaViewModelsComponent,
     ConfigCriarComponent,
     ConfigEditarComponent,
     ConfigListarComponent,
-    ConfigServicesComponent,
-    ConfigViewModelsComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +51,7 @@ import { ConfigViewModelsComponent } from './features/config/viewModels/config-v
   ],
   providers: [
     { provide: 'IHttpAlunaServiceToken', useClass: HttpAlunaService },
+    { provide: 'IHttpChamadaServiceToken', useClass: HttpChamadaService },
 
   ],
   bootstrap: [AppComponent]

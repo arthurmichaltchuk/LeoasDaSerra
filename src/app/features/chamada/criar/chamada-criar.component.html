@@ -1,1 +1,34 @@
-<p>chamada-criar works!</p>
+<div class="container main-container">
+    <h4>Cadastrar Chamada</h4>
+    <hr>
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='adicionarChamada()'>
+        <div class="form-group">
+
+            <label class="col-md-2 control-label" for="dataNascimento">Data de Nascimento</label>
+            <div class="col-md-10">
+                <div>
+                    <input class="form-control" id="dataNascimento" type="date" placeholder="Data de Nascimento (requerido)"
+                        formControlName="dataNascimento" />
+                </div>
+            </div>
+
+            <label class="col-md-2 control-label" for="aluna">Alunas</label>
+            <div class="col-md-10">
+                <select class="form-control" id="idAluna" formControlName="idAluna">
+                    <option value="">Selecione Alunas</option>
+                    <option *ngFor="let aluna of listaAlunas" value={{aluna.id}}>
+                        {{aluna.nome}}
+                    </option>
+                </select>
+            </div>
+
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
+            </div>
+        </div>
+    </form>
+</div>
