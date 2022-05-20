@@ -10,6 +10,7 @@ import { AlunaCriarComponent } from './features/aluna/criar/aluna-criar.componen
 import { AlunaEditarComponent } from './features/aluna/editar/aluna-editar.component';
 import { AlunaListarComponent } from './features/aluna/listar/aluna-listar.component';
 import { HomeComponent } from './home/home.component';
+import { SuporteComponent } from './features/suporte/suporte.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'config/listar', component: ConfigListarComponent },
   { path: 'config/criar', component: ConfigCriarComponent },
   { path: 'config/editar/:id', component: ConfigEditarComponent },
+  { path: 'suporte', component: SuporteComponent },
 
 ];
 
