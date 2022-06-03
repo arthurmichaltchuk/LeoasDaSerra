@@ -17,17 +17,32 @@ export class ChamadaCriarComponent implements OnInit {
 
   chamada: ChamadaCreateViewModel;
   listaAlunas: AlunaListViewModel[] = [];
-  aluna1: AlunaListViewModel = new AlunaListViewModel(1,'nome',new Date(2022, 5, 18),'objetivo','rua tal','responsavel','999999999');
+  aluna1: AlunaListViewModel;
+  aluna2: AlunaListViewModel;
 
 
   chaves: any[];
 
   constructor(@Inject('IHttpChamadaServiceToken') private servicoChamada: IHttpChamadaService,
     @Inject('IHttpAlunaServiceToken') private servicoAluna: IHttpAlunaService,
-    private router: Router) { }
+    private router: Router) { 
+      this.aluna1 = new AlunaListViewModel(1,'Raissa',new Date(2022, 5, 18),'objetivo','rua tal','responsavel','999999999');
+      this.aluna2 = new AlunaListViewModel(1,'Ana Maria',new Date(2018, 2, 4),'objetivo','rua tal','responsavel','999999999');
+    }
 
   ngOnInit(): void {
     this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
     this.cadastroForm = new FormGroup({
       data: new FormControl(''),
       idAluna: new FormControl(''),
