@@ -22,6 +22,7 @@ import { ConfigCriarComponent } from './features/config/criar/config-criar.compo
 import { ConfigEditarComponent } from './features/config/editar/config-editar.component';
 import { ConfigListarComponent } from './features/config/listar/config-listar.component';
 import { HttpChamadaService } from './features/chamada/services/http-chamada.service';
+import { SuporteComponent } from './features/suporte/suporte.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HttpChamadaService } from './features/chamada/services/http-chamada.ser
     ConfigCriarComponent,
     ConfigEditarComponent,
     ConfigListarComponent,
+    SuporteComponent,
   ],
   imports: [
     BrowserModule,

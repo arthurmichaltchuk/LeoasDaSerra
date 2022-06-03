@@ -4,7 +4,7 @@
     <form novalidate [formGroup]="cadastroForm" (ngSubmit)='adicionarChamada()'>
         <div class="form-group">
 
-            <label class="col-md-2 control-label" for="dataNascimento">Data de Nascimento</label>
+            <label class="col-md-2 control-label" for="dataNascimento">Data da aula</label>
             <div class="col-md-10">
                 <div>
                     <input class="form-control" id="dataNascimento" type="date" placeholder="Data de Nascimento (requerido)"
@@ -14,14 +14,16 @@
 
             <label class="col-md-2 control-label" for="aluna">Alunas</label>
             <div class="col-md-10">
-                <select class="form-control" id="idAluna" formControlName="idAluna">
-                    <option value="">Selecione Alunas</option>
-                    <option *ngFor="let aluna of listaAlunas" value={{aluna.id}}>
-                        {{aluna.nome}}
-                    </option>
-                </select>
+                <tr *ngFor="let aluna of listaAlunas">
+                    <td></td>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="{{aluna.id}}">
+                        <label class="form-check-label" for="alunasCheckBox">
+                            {{aluna.nome}}
+                        </label>
+                    </div>
+                </tr>
             </div>
-
         </div>
         <br>
         <div class="form-group">
