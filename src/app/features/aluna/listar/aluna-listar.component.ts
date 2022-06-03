@@ -13,15 +13,32 @@ export class AlunaListarComponent implements OnInit {
   listaAlunas: AlunaListViewModel[];
   listaAlunasTotal: AlunaListViewModel[];
   alunaSelecionado: any;
+  aluna1: AlunaListViewModel;
+  aluna2: AlunaListViewModel;
 
   page = 1;
   pageSize = 5;
   collectionSize = 0;
 
-  constructor(private router: Router, @Inject('IHttpAlunaServiceToken') private servicoAluna: IHttpAlunaService, private servicoModal: NgbModal) { }
+  constructor(private router: Router, @Inject('IHttpAlunaServiceToken') private servicoAluna: IHttpAlunaService, private servicoModal: NgbModal) {
+    this.aluna1 = new AlunaListViewModel(1,'Raissa',new Date(2022, 5, 18),'objetivo','rua tal','responsavel','999999999');
+    this.aluna2 = new AlunaListViewModel(1,'Ana Maria',new Date(2018, 2, 4),'objetivo','rua tal','responsavel','999999999');
+   }
 
   ngOnInit(): void {
     this.obterAlunas();
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
+    this.listaAlunas.push(this.aluna1);
+    this.listaAlunas.push(this.aluna2);
   }
 
   obterAlunas(): void {
